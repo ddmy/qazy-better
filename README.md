@@ -11,7 +11,7 @@
 #### options
 配置项|类型|默认值|备注
 ---|:---:|---:|---:
-loading|String|data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==|加载中的图片
+loading|String|一个1px的base64格式的透明图片|加载中的图片
 select|String&#124;HTMLHeadingElement|body|处理指定元素内的图片
-listener|Array|['scroll','wheel','mousewheel','resize','animationend','transitionend','transitioncancel','fullscreenchange']|监听的事件
+listener|Array|['scroll','wheel',<br>'mousewheel','resize',<br>'animationend','transitionend',<br>'transitioncancel','fullscreenchange']|监听的事件
 filter|Function|null|真实图片地址替换前的过滤函数
