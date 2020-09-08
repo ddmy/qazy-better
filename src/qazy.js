@@ -11,6 +11,7 @@ class Qazy {
         'wheel',
         'mousewheel',
         'resize',
+        'click',
         'animationend',
         'transitionend',
         'transitioncancel',
@@ -23,6 +24,7 @@ class Qazy {
       ...options
     }
     this.name = 'qazy'
+    this._eventFn = this._initListenerImg.bind(this)
     this._throttle = null
     this.timer = 200
     this.view_elements = []
@@ -71,13 +73,13 @@ class Qazy {
   _bindEvent() {
     const { listener } = this.config
     listener.forEach((v) => {
-      window.addEventListener(v, this._initListenerImg.bind(this), false)
+      window.addEventListener(v, this._eventFn, false)
     })
   }
   _unBindEvent() {
     const { listener } = this.config
     listener.forEach((v) => {
-      window.removeEventListener(v, this._initListenerImg, false)
+      window.removeEventListener(v, this._eventFn, false)
     })
   }
   _reveal() {
@@ -103,6 +105,7 @@ class Qazy {
           } else {
             this.view_elements[count].src = this.view_elements[count].getAttribute('data-qazy-src')
           }
+          // console.log(this.view_elements[count].src)
           this.view_elements.splice(count, 1)
           count--
         } else {
