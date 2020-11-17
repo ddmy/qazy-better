@@ -1,0 +1,31 @@
+{
+  "name": "qazy-better",
+  "version": "1.0.0",
+  "description": "支持网站SEO的图片懒加载mini插件",
+  "main": "./dist/qazy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddmy/qazy-better.git"
+  },
+  "keywords": [
+    "seo",
+    "lazyload"
+  ],
+  "author": "Yijio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddmy/qazy-better/issues"
+  },
+  "homepage": "https://github.com/ddmy/qazy-better#readme",
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.44.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.2.0"
+  }
+}
